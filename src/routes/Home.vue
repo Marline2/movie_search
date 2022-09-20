@@ -1,0 +1,10 @@
+<template>
+  <h1>
+    hi
+  </h1>
+  <button
+    type="button"
+    class="btn btn-primary">
+    Primary
+  </button>
+</template>
