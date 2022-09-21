@@ -1,10 +1,15 @@
 <template>
-  <h1>
-    hi
-  </h1>
-  <button
-    type="button"
-    class="btn btn-primary">
-    Primary
-  </button>
+  <Headline />
+  <Search />
 </template>
+
+<script>
+import Headline from '~/components/Headline'
+import Search from '~/components/Search'
+export default {
+  components:{
+    Headline,
+    Search
+  },
+}
+</script>

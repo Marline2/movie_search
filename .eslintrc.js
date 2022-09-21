@@ -28,10 +28,7 @@ module.exports = {
       "math": "always"
     }],
     "vue/multi-word-component-names":["error",{
-      "ignores":["default", "About", "Home", "Header", "Movie", "Logo",]
+      "ignores":["default", "About", "Home", "Header", "Movie","Headline", "Search"]
     }],
-    "vue/comment-directive": ["error", {
-      "vue/comment-directive": 0
-    }]
   },
 };
