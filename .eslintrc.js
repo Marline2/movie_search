@@ -28,7 +28,7 @@ module.exports = {
       "math": "always"
     }],
     "vue/multi-word-component-names":["error",{
-      "ignores":["default", "About", "Home", "Header", "Movie","Headline", "Search"]
+      "ignores":["default", "About", "Home", "Header", "Movie","Headline", "Search","MovieItem","MovieList"]
     }],
   },
 };
