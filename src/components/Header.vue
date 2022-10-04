@@ -28,15 +28,15 @@ export default{
       navigations:[
         {
           name:'Search',
-          herf:'/'
+          href:'/'
         },
         {
           name:'Movie',
-          herf:'/movie'
+          href:'/movie'
         },
         {
           name:'About',
-          herf:'/about'
+          href:'/about'
         }
       ]
     }

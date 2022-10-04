@@ -1,14 +1,17 @@
 <template>
-  <Header_ />
+  <headers />
   <RouterView />
+  <footers />
 </template>
 
 <script>
-import Header_ from '~/components/Header'
+import Headers from '~/components/Header'
+import Footer from '~/components/Footer'
 
 export default {
   components:{
-    Header_
+    headers:Headers,
+    footers:Footer
   }
 }
 </script>
