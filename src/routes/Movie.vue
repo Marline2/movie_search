@@ -21,8 +21,12 @@
       v-else
       class="movie-details">
       <div
-        :style="{backgroundImage:`url(${theMovie.Poster})`}"
-        class="poster"></div>
+        :style="{backgroundImage:`url(${requestDiffSizeImage(theMovie.Poster)})`}"
+        class="poster">
+        <Loader
+          v-if="imageLoading"
+          absolute />
+      </div>
       <div class="specs">
         <div class="title">
           {{ theMovie.Title }}
@@ -44,7 +48,7 @@
               :title="name"
               class="rating">
               <img
-                :src="`../assets/${name}.png`" 
+                :src="`https://raw.githubusercontent.com/Marline2/movie_search/master/src/assets/${name}.png`" 
                 alt="name" />
               <span>{{ score }}</span>
             </div>
@@ -77,6 +81,11 @@ export default {
   components:{
     Loader
   },
+  data(){
+    return{
+      imageLoading: true
+    }
+  },
   computed:{
     theMovie(){
       console.log(this.$store.state.movie.theMovie)
@@ -91,6 +100,20 @@ export default {
       id: this.$route.params.id
     })
   },
+  methods:{
+    requestDiffSizeImage(url, size = 700){
+      if(!url || url === 'N/A'){
+        this.imageLoading = false
+        return ''
+      }
+      const src = url.replace('SX300', `SX${size}`)
+      this.$loadImage(src).then(()=>{
+          this.imageLoading = false
+        }
+      )
+      return src
+    }
+  }
 }
 </script>
 
@@ -107,6 +130,7 @@ export default {
     width: 500px;
     height:calc(500px * 3 / 2);
     margin-right:70px;
+    position: relative;
   }
   .specs{
     flex-grow:1;

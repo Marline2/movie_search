@@ -49,6 +49,7 @@ header{
   padding:0 40px;
   display: flex;
   align-items: center;
+  position:relative;
   .logo{
     margin-right:40px;
   }
