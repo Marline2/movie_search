@@ -67,7 +67,7 @@ export default {
         }
 
     },
-    async searchMovieWidthId({state, commit}, payload){
+    async searchWithId({state, commit}, payload){
       if(state.loading) return
       commit('updateState',{
         theMovie:{},
@@ -75,6 +75,7 @@ export default {
       })
       try{
         const res = await _fetchMovie(payload)
+        console.log(res.data)
         commit('updateState',{
           theMovie: res.data
         })

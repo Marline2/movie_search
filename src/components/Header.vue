@@ -7,7 +7,7 @@
         :key="nav.name"
         class="nav-item">
         <RouterLink
-          :to="nav.herf"
+          :to="nav.href"
           active-class="active"
           class="nav-link">
           {{ nav.name }}
@@ -32,7 +32,7 @@ export default{
         },
         {
           name:'Movie',
-          href:'/movie'
+          href:'/movie/tt4520988'
         },
         {
           name:'About',
