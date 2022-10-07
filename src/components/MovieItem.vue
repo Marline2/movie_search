@@ -1,5 +1,6 @@
 <template>
-  <div
+  <RouterLink
+    :to="`/movie/${movie.imdbID}`"
     class="movie"
     :style="{backgroundImage:`url(${movie.Poster})`}">
     <Loader
@@ -14,7 +15,7 @@
         {{ movie.Title }}
       </div>
     </div>
-  </div>
+  </RouterLink>
 </template>
 <script>
 import Loader from '~/components/Loader'
@@ -53,7 +54,7 @@ export default{
 }
 </script>
 <style lang="scss" scoped>
-@import "~/scss/main";
+
 .movie{
   $width:200px;
   width:$width;
