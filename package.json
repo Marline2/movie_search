@@ -7,7 +7,9 @@
     "dev": "netlify dev",
     "build": "webpack --mode production",
     "test:unit": "jest --watchAll",
-    "test:unit:silent":"jest --watchAll --silent"
+    "test:unit:silent": "jest --watchAll --silent",
+    "test:e2e": "cypress open",
+    "test:e2e:headless":"cypress run"
   },
   "license": "MIT",
   "devDependencies": {
@@ -22,8 +24,10 @@
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
+    "cypress": "^10.10.0",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.23.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-vue": "^9.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
